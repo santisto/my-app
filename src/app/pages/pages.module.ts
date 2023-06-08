@@ -8,7 +8,7 @@ import { FormularioComponent } from './formulario/formulario.component';
 @NgModule({
   declarations: [
     HomeComponent,
-    FormularioComponent,
+   /* FormularioComponent,*/
   ],
   imports: [
     CommonModule
