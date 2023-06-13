@@ -8,6 +8,8 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { FormularioComponent } from './pages/formulario/formulario.component';
 import { HomeComponent } from './pages/home/home.component';
 import { EventosComponent } from './pages/eventos/eventos.component';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { LoginComponent } from './login/login.component'; 
 
 @NgModule({
   declarations: [
@@ -16,11 +18,14 @@ import { EventosComponent } from './pages/eventos/eventos.component';
     FormularioComponent,
     FooterComponent,
     HomeComponent,
-    EventosComponent
+    EventosComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
