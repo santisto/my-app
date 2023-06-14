@@ -13,8 +13,8 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      mail: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required],
+      mail: ['', [Validators.required, Validators.email, Validators.maxLength(35)]],
+      password: ['', Validators.required, Validators.minLength(8), Validators.maxLength(15)],
     });
   }
 
@@ -22,4 +22,10 @@ export class LoginComponent implements OnInit {
     console.log(this.form.value.mail);
     console.log(this.form.value.password);
   }
+  
+  get Password () {
+    return this.form.get("Password"); 
+  }
+
+  
 }
