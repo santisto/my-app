@@ -10,7 +10,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { EventosComponent } from './pages/eventos/eventos.component';
 import { CalendarioEventosComponent } from './pages/calendario-eventos/calendario-eventos.component';
 import { PropuestasComponent } from './pages/propuestas/propuestas.component';
-
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { LoginComponent } from './login/login.component'; 
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,11 +21,14 @@ import { PropuestasComponent } from './pages/propuestas/propuestas.component';
     HomeComponent,
     EventosComponent,
     CalendarioEventosComponent,
-    PropuestasComponent
+    PropuestasComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
