@@ -6,9 +6,14 @@
       class="form-control"
       placeholder="Email"
       required="required"
-      formControlName="mail"
+      formControlName="email"
       id="email"
     />
+    <div *ngIf="form.controls['email'].errors && form.controls['email'].touched">
+      <p *ngIf="form.controls['email'].hasError('required')" class="text-danger">El email es requerido.</p>
+      <p *ngIf="form.controls['email'].hasError('email')" class="text-danger">El formato del email debe ser válido.</p>
+      <p *ngIf="form.controls['email'].hasError('maxlength')" class="text-danger">El email no debe sobrepasar los 35 caracteres.</p>
+    </div>
     <input
       type="password"
       class="form-control"
@@ -16,6 +21,11 @@
       placeholder="Password"
       required="required"
     />
+    <div *ngIf="form.controls['password'].errors && form.controls['password'].touched">
+      <p *ngIf="form.controls['password'].hasError('required')" class="text-danger">El password es requerido.</p>
+      <p *ngIf="form.controls['password'].hasError('minlength')" class="text-danger">El password debe tener minimo 8 caracteres.</p>
+      <p *ngIf="form.controls['password'].hasError('maxlength')" class="text-danger">La contraseña no debe sobrepasar los 15 caracteres.</p>
+    </div>
     <button type="submit">Log in</button>
   </form>
 </div>
