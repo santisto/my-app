@@ -1,13 +1,27 @@
+<!--<div class="event-cards">
+  <div class="event-card" *ngFor="let evento of eventos">
+    <img [src]="evento.imagen" alt="Imagen del evento" class="event-image">
+    <div class="event-details">
+      <h3>{{ evento.nombre }}</h3>
+      <p>{{ evento.detalle }}</p>
+      <p>Fecha: {{ evento.fecha | date }}</p>
+      <p>Estado: {{ evento.estado }}</p>
+    </div>
+  </div>
+</div>-->
+
 
  <!--CARTAS EVENTOS-->
  <div class="container mt-5">
     <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="event-card" *ngFor="let evento of eventos">
         <div class="col">
           <div class="card h-100">
-            <img src="assets/img/handball.jpg" class="card-img-top" alt="...">
+            <img src={{evento.imagen}} class="card-img-top" alt="...">
             <div class="card-body">
-              <h5 class="card-title fw-medium text-center"> HANDBALL</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              
+              <h5 class="card-title fw-medium text-center"> {{ evento.nombre }}</h5>
+              <p class="card-text">{{evento.detalle}}</p>
             </div>
             <div class="card-footer d-flex justify-content-between">
                 <div class="input-group">
@@ -18,8 +32,11 @@
             </div>
           </div>
         </div>
+        </div>
+      </div>
+ </div>
     
-        <div class="col">
+    <!--    <div class="col">
           <div class="card h-100">
             <img src="assets/img/voley.jpg" class="card-img-top" alt="...">
             <div class="card-body">
@@ -54,7 +71,7 @@
         </div>
     
       </div>
- </div>
+ </div>   -->
 
 <!--
 
