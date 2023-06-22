@@ -13,19 +13,21 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      mail: ['', [Validators.required, Validators.email, Validators.maxLength(35)]],
-      password: ['', Validators.required, Validators.minLength(8), Validators.maxLength(15)],
+      email: ['', [Validators.required, Validators.email, Validators.maxLength(35)]],
+      password: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(15)]],
     });
   }
 
   login() {
-    console.log(this.form.value.mail);
+    console.log(this.form.value.email);
     console.log(this.form.value.password);
   }
   
-  get Password () {
-    return this.form.get("Password"); 
+  get password() {
+    return this.form.get("password"); 
   }
 
-  
+  get email() {
+    return this.form.get("email"); 
+  }
 }
