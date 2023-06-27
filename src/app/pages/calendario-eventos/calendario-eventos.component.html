@@ -1,97 +1,3 @@
-<!--<div class="container mt-5">
-  <div class="row row-cols-1 row-cols-md-2">
-      
-    <div class="col">    
-        <div class="card mb-2"> 
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="assets/img/handball.jpg" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting textFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-    </div>
-  
-    
-    <div class="col">
-
-      <div class="card mb-8">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="assets/img/handball.jpg" class="img-fluid rounded-start" alt="...">
-          </div>
-            
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a widerFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="card-footer text-body-secondary"> 2 days ago </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  
-    </div>
-</div>
-
-CHAT
-<div class="container mt-5">
-  <div class="row row-cols-1 row-cols-md-2">
-      
-    <div class="col">    
-        <div class="card"> 
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="assets/img/handball.jpg" class="img-fluid rounded-start" alt="...">
-            </div>
-            <div class="col-md-4">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a wider card with supporting textFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-    </div>
-  
-    
-    <div class="col">
-
-      <div class="card mb-8">
-        <div class="row g-0">
-          <div class="col-md-8">
-            <img src="assets/img/handball.jpg" class="img-fluid rounded-start" alt="...">
-          </div>
-            
-          <div class="col-md-4">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">TFFFFFFFF card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="card-footer text-body-secondary"> 2 days ago </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  
-  </div>
-</div>
-
-CHAT-->
 <style>
   .card {
     display: flex;
@@ -104,35 +10,20 @@ CHAT-->
     width: 100%;
   }
 </style>
-
 <div class="container mt-5">
   <div class="row">
-    <div class="col-md-6">
+    <div clas="event-card" *ngFor="let evento of eventos" class="col-md-6">
       <div class="card mb-3">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="assets/img/handball.jpg" class="card-img" alt="Imagen de la carta 1">
+            <img src={{evento.imagen}} class="card-img" alt="Imagen del evento">
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">Título de la carta 1</h5>
-              <p class="card-text">Descripción de la carta 1. Este es un texto más largo que puede hacer que la imagen se ajuste automáticamente. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum auctor quam ut nibh bibendum, sit amet rutrum justo convallis.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="card mb-3">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="assets/img/handball.jpg" class="card-img" alt="Imagen de la carta 2">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h5 class="card-title">Título de la carta 2</h5>
-              
-              <p class="card-text">DeÉrase una vez en un pequeño pueblo rodeado de bosques, vivía un valiente joven llamado Diego. Diego soñaba con aventuras y anhelaba descubrir los secretos ocultos más allá de su hogar. Un día, decidió emprender un viaje al bosque prohibido, un lugar misterioso y lleno de leyendas.scripción de la carta 2. Este es otro texto que puede hacer que la imagen se ajuste automáticamente. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur, metus at auctor tincidunt, elit mauris gravida lectus, ac tempus urna ex eget nisl.</p>
+              <h5 class="card-title">{{evento.nombre}}</h5>
+              <p class="card-text">{{evento.detalle}}</p>
+              <p class="card-text">{{evento.fecha}}</p>
+              <p class="card-text">{{evento.hora}}</p>
             </div>
           </div>
         </div>
@@ -140,5 +31,29 @@ CHAT-->
     </div>
   </div>
 </div>
-
-
+<!-- CARTAS SIN AYUDA DEL CHAT
+<div class="container mt-5">
+  <div class="row">
+    <div clas="event-card" *ngFor="let evento of eventos">
+    <div class="col-md-6">
+      <div class="card mb-3">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src={{evento.imagen}} class="card-img" alt="Imagen de la carta 1">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">{{evento.nombre}}</h5>
+              <p class="card-text">{{evento.detalle}}</p>
+              <p class="card-text">{{evento.fecha}}</p>
+              <p class="card-text">{{evento.hora}}</p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+-->
