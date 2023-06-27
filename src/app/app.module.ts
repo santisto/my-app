@@ -11,6 +11,8 @@ import { EventosComponent } from './pages/eventos/eventos.component';
 import { CalendarioEventosComponent } from './pages/calendario-eventos/calendario-eventos.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { LoginComponent } from './login/login.component'; 
+import { QuieneSomosComponent } from './pages/quiene-somos/quiene-somos.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +22,8 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
     EventosComponent,
     CalendarioEventosComponent,
-    LoginComponent
+    LoginComponent,
+    QuieneSomosComponent
   ],
   imports: [
     BrowserModule,

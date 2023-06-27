@@ -3,11 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 import {EventosComponent} from './pages/eventos/eventos.component'
 import { LoginComponent } from "./login/login.component";
 import { FormularioComponent } from './pages/formulario/formulario.component';
+import { QuieneSomosComponent } from './pages/quiene-somos/quiene-somos.component';
+import { CalendarioEventosComponent } from './pages/calendario-eventos/calendario-eventos.component';
 
 const routes: Routes = [
   { path: 'eventos', component:EventosComponent  },
   { path: 'login', component:LoginComponent },
-  { path: 'formulario', component:FormularioComponent}
+  { path: 'formulario', component:FormularioComponent},
+  {path: 'quienesSomos', component:QuieneSomosComponent},
+  {path: 'calendarioEventosComponent' , component: CalendarioEventosComponent }
 
 ];
 
