@@ -11,7 +11,7 @@ export class EventosComponent{
   eventos: Event[] = [
     {
       nombre: 'HANDBALL',
-      detalle: 'This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.',
+      detalle: 'Descripción del evento 1',
       fecha: new Date('2023-06-20'),
       estado: 'Activo',
       imagen: 'assets/img/handball.jpg'

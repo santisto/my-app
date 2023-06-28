@@ -12,6 +12,8 @@ import { CalendarioEventosComponent } from './pages/calendario-eventos/calendari
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { LoginComponent } from './login/login.component'; 
 import { QuieneSomosComponent } from './pages/quiene-somos/quiene-somos.component';
+/*import { HttpClientModule } from '@angular/common/http';*/
+import { RegisterComponent } from './registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { QuieneSomosComponent } from './pages/quiene-somos/quiene-somos.componen
     EventosComponent,
     CalendarioEventosComponent,
     LoginComponent,
-    QuieneSomosComponent
+    QuieneSomosComponent,
+    /*HttpClientModule*/
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
